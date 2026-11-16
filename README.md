@@ -1,6 +1,6 @@
-# ResearchOS — Critical Infrastructure Defense
+# ResearchOS TECT — Critical Infrastructure Defense
 
-**A local-first research workspace for defensive infrastructure resilience modeling.** Build an illustrative asset/dependency map, register qualitative risks, model synthetic disruptions, compare safeguard assumptions, record evidence and export reproducible results.
+**An independent ResearchOS TECT workspace for defensive infrastructure resilience modeling.** Build an illustrative asset/dependency map, register qualitative risks, model synthetic disruptions, compare safeguard assumptions, record evidence and export reproducible results.
 
 > **Status:** working, deterministic research prototype (v1.0). **Not** validated for operational defense, security decisions, control systems, incident response or critical-infrastructure planning. Independent project; no DARPA/DHS/CISA affiliation or endorsement. No AI inference is implemented despite the project's broader research roadmap.
 
@@ -63,3 +63,12 @@ Suggested research directions: sensitivity analysis, bounded uncertainty ensembl
 ## License
 
 No license is granted by this README. Repository owner should choose and add a license before inviting external contributions.
+
+## ResearchOS TECT
+
+This repository is part of Troy Turner's independent ResearchOS TECT research effort, supporting reproducible scenario modeling, explicit assumptions, evidence-linked review and portable research outputs.
+
+- Repository: https://github.com/tltmgnt/ResearchOS-Critical-Infrastructure-Defense
+- Research portfolio: https://github.com/tltmgnt?tab=repositories
+
+TECT is retained as the project identifier without an assumed expansion. Inclusion in the portfolio does not imply government affiliation, sponsorship or operational validation.
