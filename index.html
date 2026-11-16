@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1420">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>ResearchOS | Critical Infrastructure Defense</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/src/app.mjs"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">◈</span><div><strong>ResearchOS</strong><small>CRITICAL SYSTEMS LAB</small></div></div>
+      <div class="work-label">RESEARCH WORKSPACE <span>v1.0</span></div>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-footer"><span class="live-dot"></span> Local-first prototype <p>Synthetic data only. No live infrastructure connections.</p></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div><p class="eyebrow">INFRASTRUCTURE RESILIENCE INTELLIGENCE</p><h1 id="page-title">Overview</h1></div>
+        <div class="header-actions"><button type="button" class="btn btn-secondary" id="save-json">↓ Export study</button><label class="btn btn-secondary upload">↑ Import study <input id="load-json" type="file" accept=".json,application/json" aria-label="Import study JSON"></label></div>
+      </header>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <div id="view"></div>
+      <footer class="footer-note">ResearchOS-CID · Deterministic research sandbox · Not an operational defense system or validated decision tool</footer>
+    </main>
+  </div>
+</body>
+</html>

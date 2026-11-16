@@ -1,0 +1,15 @@
+{
+  "name": "researchos-critical-infrastructure-defense",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-first, synthetic critical-infrastructure resilience research workspace",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node tools/build.mjs",
+    "check": "node --check src/model.mjs && node --check src/app.mjs && node --check server.mjs && node --check cli.mjs && npm test && npm run build",
+    "demo": "node cli.mjs examples/study.json outage"
+  }
+}

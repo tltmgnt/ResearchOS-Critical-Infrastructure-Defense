@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "project": "Regional Infrastructure Resilience — Illustrative Study",
+  "assets": [
+    {
+      "id": "grid",
+      "name": "Electric grid service",
+      "sector": "Energy",
+      "criticality": 5,
+      "recoveryDays": 5,
+      "dependencies": []
+    },
+    {
+      "id": "water",
+      "name": "Water treatment service",
+      "sector": "Water",
+      "criticality": 5,
+      "recoveryDays": 3,
+      "dependencies": [
+        {
+          "id": "grid",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "telecom",
+      "name": "Emergency communications",
+      "sector": "Communications",
+      "criticality": 5,
+      "recoveryDays": 2,
+      "dependencies": [
+        {
+          "id": "grid",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "freight",
+      "name": "Regional freight operations",
+      "sector": "Transportation",
+      "criticality": 4,
+      "recoveryDays": 4,
+      "dependencies": [
+        {
+          "id": "grid",
+          "weight": 0.35
+        },
+        {
+          "id": "telecom",
+          "weight": 0.3
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "name": "Hospital service continuity",
+      "sector": "Healthcare",
+      "criticality": 5,
+      "recoveryDays": 2,
+      "dependencies": [
+        {
+          "id": "grid",
+          "weight": 0.55
+        },
+        {
+          "id": "water",
+          "weight": 0.3
+        },
+        {
+          "id": "telecom",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "id": "distribution",
+      "name": "Essential goods distribution",
+      "sector": "Supply chain",
+      "criticality": 4,
+      "recoveryDays": 4,
+      "dependencies": [
+        {
+          "id": "freight",
+          "weight": 0.65
+        },
+        {
+          "id": "telecom",
+          "weight": 0.25
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "outage",
+      "name": "Power service interruption",
+      "horizon": 21,
+      "events": [
+        {
+          "id": "ev1",
+          "assetId": "grid",
+          "startDay": 2,
+          "duration": 3,
+          "severity": 70
+        }
+      ]
+    },
+    {
+      "id": "dual",
+      "name": "Compound services disruption",
+      "horizon": 25,
+      "events": [
+        {
+          "id": "ev2",
+          "assetId": "grid",
+          "startDay": 3,
+          "duration": 2,
+          "severity": 45
+        },
+        {
+          "id": "ev3",
+          "assetId": "telecom",
+          "startDay": 5,
+          "duration": 4,
+          "severity": 50
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "r1",
+      "assetId": "water",
+      "title": "Dependence on uninterrupted electricity",
+      "likelihood": 3,
+      "impact": 5,
+      "status": "Assessing"
+    },
+    {
+      "id": "r2",
+      "assetId": "hospital",
+      "title": "Continuity during supporting service outages",
+      "likelihood": 2,
+      "impact": 5,
+      "status": "Open"
+    },
+    {
+      "id": "r3",
+      "assetId": "distribution",
+      "title": "Multi-service delivery disruption",
+      "likelihood": 3,
+      "impact": 4,
+      "status": "Mitigating"
+    }
+  ],
+  "mitigations": [
+    {
+      "assetId": "grid",
+      "efficacy": 25,
+      "cost": 45000,
+      "enabled": true
+    },
+    {
+      "assetId": "hospital",
+      "efficacy": 35,
+      "cost": 24000,
+      "enabled": true
+    }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "text": "All assets, dependencies and controls in this example are fictional research assumptions.",
+      "source": "Synthetic demonstration dataset"
+    }
+  ]
+}
